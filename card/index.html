@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Experiments</title>
+  <style>
+      :root {
+          font-size: 62.5%;
+      }
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-size: 1.6rem;
+
+          display: grid;
+          place-items: center;
+          height: 100vh;
+      }
+
+      body * {
+          font-family: sans-serif;
+      }
+
+      .card {
+          border: 0.2rem solid black;
+          padding: 5rem;
+          border-radius: 2rem;
+          width: min(50rem, 80%);
+          margin: auto;
+          background-image: url("heart.png");
+          background-repeat: no-repeat;
+          background-color: white;
+          background-size: contain;
+      }
+
+      .card--img-left {
+          background-position: calc(100% + 15rem);
+      }
+
+      .card--img-center {
+          background-position: center 1rem;
+          background-size: 15rem;
+      }
+
+      .card--img-right {
+          background-position: calc(0% - 15rem);
+      }
+
+      .card__title {
+          text-align: center;
+      }
+
+      .card__description {
+          margin-top: 5rem;
+      }
+  </style>
+</head>
+<body>
+  <div class="card card--img-left">
+    <h1 class="card__title">Card title</h1>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at et porro. Dolorem ducimus et non perferendis, suscipit unde? Culpa minus nihil nostrum officia officiis quam quas voluptatum. Maxime, possimus!</p>
+  </div>
+
+  <div class="card card--img-center">
+    <h1 class="card__title">Card title</h1>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at et porro. Dolorem ducimus et non perferendis, suscipit unde? Culpa minus nihil nostrum officia officiis quam quas voluptatum. Maxime, possimus!</p>
+  </div>
+
+  <div class="card card--img-right">
+    <h1 class="card__title">Card title</h1>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at et porro. Dolorem ducimus et non perferendis, suscipit unde? Culpa minus nihil nostrum officia officiis quam quas voluptatum. Maxime, possimus!</p>
+  </div>
+</body>
+</html>
