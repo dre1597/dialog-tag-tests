@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>HTML Experiments</title>
+  <style>
+      dialog {
+          padding: 0;
+      }
+
+      dialog::backdrop {
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .flex {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+
+      form {
+          margin: 0;
+          padding: 1rem;
+      }
+
+      #close-from-id {
+          margin: 1rem;
+      }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>dialog demo</h1>
+    <dialog id="dialog">
+      <div class="flex">
+        <form method="dialog">
+          <p>Hello from dialog</p>
+          <button>Close from form</button>
+        </form>
+
+        <button id="close-from-id" onclick="dialog.close()">Close from button</button>
+      </div>
+    </dialog>
+
+    <button onclick="dialog.showModal()">Open Dialog</button>
+  </div>
+
+  <script>
+    const $dialog = document.getElementById('dialog');
+
+    $dialog.addEventListener('click', event => {
+      if (event.target.nodeName === 'DIALOG') {
+        $dialog.close();
+      }
+    });
+  </script>
+</body>
