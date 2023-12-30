@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport"
+    >
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Meter</title>
+  </head>
+  <body>
+    <meter
+        high="75"
+        id="meter"
+        low="25"
+        max="100"
+        min="0"
+        optimum="80"
+        value="0"
+    ></meter>
+
+    <progress id="progress" max="100" value="0">70%</progress>
+    
+    <script>
+      const meter = document.getElementById('meter');
+      const progress = document.getElementById('progress');
+
+      setInterval(() => {
+        meter.value += 10;
+      }, 1000);
+
+      setInterval(() => {
+        progress.value += 10;
+      }, 1000);
+    </script>
+  </body>
+</html>
